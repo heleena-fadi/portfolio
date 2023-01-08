@@ -3,7 +3,6 @@
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
-   
 }
 html{
     scroll-behavior: smooth;
@@ -30,6 +29,8 @@ nav{
     font-size: 35px;
     color: #fff;
     cursor: pointer;
+    margin-left: 32px;
+    margin-top: 28px;
 }
 
 span{
@@ -39,11 +40,14 @@ span{
 nav ul li{
    list-style-type: none;
    display: inline-block;
-   padding: 10px 25px;
+   width: 148px;
 }
-
-nav ul li a{
-    color: #fff;
+nav ul li a {
+    color: rgb(78, 77, 77);
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding:10px 12px;
+    background-color: rgba(0, 0, 0, .1);
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -68,20 +72,15 @@ transition: transform 0.4s;
 .btn:hover{
     transform: scale(1.2);
 }
-
-.content{
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-
+.content {
+margin-top: 250px;
+margin-left: 32px;
 }
 
 h1{
     color: #fff;
     margin: 20px 0px 20px;
     font-size: 40px;
-
 }
 
 h3{
@@ -109,6 +108,7 @@ h4{
 
 .text-about{
     width: 550px;
+    margin-left: 24px;
 }
 .cont {
 width: 1130px;
@@ -151,6 +151,8 @@ justify-content: space-around;
     padding: 13px 30px;
     transition: transform 0.4s;
     border: 2px solid transparent;
+    display: block;
+    width: 150px;
 }
 .serviece{
 width: 100%;
@@ -202,4 +204,126 @@ justify-content: center;
         transform: translateY(10px);
         color: orange;
     }
+      header a {
+        text-decoration: none;
+      }
+      
+      header {
+        padding: 0 20px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      ul {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      
+      ul a {
+        color: orange;
+      }
+      
+      ul li {
+        padding: 5px;
+        margin-left: 10px;
+      }
+      
+      ul li:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+      
+      #icons {
+        margin: auto 0;
+        display: none;
+        cursor: pointer;
+      }
+      
+      #icons div {
+        width: 35px;
+        height: 3px;
+        background-color: gray;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .open .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      
+      .open .bar2 {
+        opacity: 0;
+      }
+      
+      .open .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -8px);
+        transform: rotate(45deg) translate(-6px, -8px);
+      }
+      
+      .open .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgba(0, 0, 0, .9);
+        padding-top: 64px;
+        
+      }
+      
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        height: calc(100vh - 50px);
+        width: 100%;
+      }
+      
+      .mobile-menu li {
+        margin-bottom: 32px;
+      }
 
+      @media only screen and (max-width: 1024px) {
+        .about{
+            width: 100%;
+            padding: 0px;
+           background-color: #f1f1f1;
+        }
+        
+        .text-about {
+            margin-bottom: 24px;
+            padding: 24px;
+        }
+        .text-about h2 {
+            font-size: 32px;
+        }
+
+        .text-about p {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+        .cont {
+            padding: 24px;
+            flex-direction: column-reverse;
+        }
+      }
+      
+      @media only screen and (max-width: 600px) {
+        header nav {
+          display: none;
+        }
+      
+        #icons {
+          display: block;
+        }
+
+        .head {
+            margin-top: 12px;
+            font-size: 24px;
+        }
+      }
